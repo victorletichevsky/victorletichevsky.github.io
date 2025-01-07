@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0">
     <title>Visualizador de PDF</title>
     <style>
         body {
@@ -11,14 +11,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100vh; /* Altura total da janela */
             background-color: #000000;
         }
         iframe {
-            width: 100vw; /* Largura total da janela */
-            height: 100vh; /* Altura total da janela */
+            width: 100%; /* Ajusta a largura para dispositivos móveis */
+            height: auto; /* Altura ajustada para manter proporção */
+            max-height: 100%; /* Não ultrapassa a altura da tela */
             border: none;
-            transform: scale(1); /* Ajusta o tamanho */
+        }
+        /* Ajustes para dispositivos móveis */
+        @media (max-width: 768px) {
+            iframe {
+                width: 90%; /* Ajusta a largura em telas menores */
+                height: auto; /* Mantém a proporção */
+            }
         }
     </style>
 </head>
