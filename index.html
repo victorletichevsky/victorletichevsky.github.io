@@ -1,20 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de PDF</title>
     <style>
         body {
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
         }
         iframe {
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             border: none;
+            object-fit: contain; /* Ajusta o conteúdo ao espaço disponível */
         }
     </style>
 </head>
 <body>
-    <iframe src="cartaoDigitalAniela.pdf#toolbar=0&zoom=page-width"></iframe>
+    <iframe src="cartaoDigitalAniela.pdf"></iframe>
 </body>
 </html>
