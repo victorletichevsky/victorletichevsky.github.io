@@ -14,7 +14,7 @@
             height: 100vh;
             background-color: #000000;
         }
-        embed {
+        iframe {
             width: 100%;
             height: 100%;
             border: none;
@@ -22,7 +22,7 @@
     </style>
 </head>
 <body>
-    <!-- Substituindo iframe por embed -->
-    <embed src="cartaoDigitalAniela.pdf#zoom=page-fit" type="application/pdf">
+    <!-- Troca para iframe para garantir compatibilidade com hyperlinks -->
+    <iframe src="cartaoDigitalAniela.pdf#zoom=page-fit"></iframe>
 </body>
 </html>
